@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hospital Job Scheduling System | Java Project</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
+body{background:#f8fbff;color:#0f2a4a}
+header{background:white;padding:18px 6%;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 10px rgba(0,0,0,0.05);position:sticky;top:0}
+.logo{font-weight:700;font-size:22px;display:flex;align-items:center;gap:10px}
+.logo span{color:#0e8a8a}
+.btn{padding:10px 18px;border-radius:8px;text-decoration:none;font-weight:600;display:inline-block}
+.btn-primary{background:#0e8a8a;color:white}
+.btn-outline{border:2px solid #0e8a8a;color:#0e8a8a}
+.hero{display:flex;flex-wrap:wrap;padding:50px 6%;align-items:center;gap:30px}
+.hero-left{flex:1;min-width:300px}
+.hero-left h1{font-size:48px;line-height:1.1;margin-bottom:15px}
+.hero-left p{color:#556;font-size:17px;margin-bottom:25px;line-height:1.6}
+.hero-img{flex:1;min-width:300px;background:#e6f0ff;border-radius:20px;padding:20px;text-align:center}
+.badges{margin:25px 0;display:flex;gap:10px;flex-wrap:wrap}
+.badge{background:#0e8a8a;color:white;padding:6px 14px;border-radius:20px;font-size:13px;font-weight:600}
+.features{padding:40px 6%;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.card{background:white;padding:25px;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,0.06);text-align:center}
+.stats{display:flex;flex-wrap:wrap;justify-content:space-around;background:#e6eef8;margin:20px 6%;padding:25px;border-radius:16px;text-align:center}
+.stat h2{color:#0e8a8a;font-size:32px}
+.code{background:#0f1e3a;color:#cde;padding:20px;border-radius:12px;margin:20px 6%;font-family:monospace;overflow:auto}
+footer{background:#0f2a4a;color:#a9c3e6;padding:30px 6%;text-align:center;margin-top:40px}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">🏥 <span>Hospital Scheduler</span></div>
+<a class="btn btn-primary" href="https://github.com/kolatinithya-byte/hospital-scheduler" target="_blank">View on GitHub</a>
+</header>
+
+<section class="hero">
+<div class="hero-left">
+<h1>Hospital Job Scheduling System</h1>
+<p>Automated, reliable, and efficient staff scheduling built with <b>Java SE (JDBC, built-in HTTP server) + MySQL / PostgreSQL</b>. Streamlines shifts, manages rosters, and reduces scheduling conflicts.</p>
+<div>
+<a class="btn btn-primary" href="https://github.com/kolatinithya-byte/hospital-scheduler">🚀 View Project Code</a>
+<a class="btn btn-outline" href="#how-to-run">How to Run</a>
+</div>
+<div class="badges">
+<span class="badge">Java 17</span>
+<span class="badge">JDBC</span>
+<span class="badge">HTTP Server</span>
+<span class="badge">Maven</span>
+<span class="badge">MySQL / PostgreSQL</span>
+</div>
+</div>
+<div class="hero-img">
+<img src="https://cdn-icons-png.flaticon.com/512/2966/2966327.png" width="260" alt="hospital">
+<p style="margin-top:15px;color:#667">Java Backend + Database Driven Scheduler</p>
+</div>
+</section>
+
+<section class="features">
+<div class="card"><div style="font-size:40px">📅</div><h3>Smart Shift Scheduling</h3><p>Automate shift creation with conflict detection and skill-based assignments.</p></div>
+<div class="card"><div style="font-size:40px">👥</div><h3>Staff Management</h3><p>Manage staff availability, roles, departments and certifications in one database.</p></div>
+<div class="card"><div style="font-size:40px">📊</div><h3>Built-in HTTP Server</h3><p>No Spring Boot needed. Pure Java SE HTTP server serves APIs directly with JDBC.</p></div>
+</section>
+
+<div class="stats">
+<div class="stat"><h2>100%</h2><p>Java SE Based</p></div>
+<div class="stat"><h2>SQL</h2><p>MySQL / Postgres</p></div>
+<div class="stat"><h2>REST</h2><p>HTTP API Ready</p></div>
+<div class="stat"><h2>Maven</h2><p>pom.xml Build</p></div>
+</div>
+
+<div id="how-to-run" class="code">
+<pre>
+# How to Run this Java Project
+
+git clone https://github.com/kolatinithya-byte/hospital-scheduler.git
+cd hospital-scheduler/hospital-scheduler
+
+# Import DB from /db folder
+mysql -u root -p < db/schema.sql
+
+# Configure DB in src/main/java/config/DatabaseConfig.java
+mvn clean compile
+mvn exec:java -Dexec.mainClass="com.hospital.Main"
+
+# Server starts on http://localhost:8080
+</pre>
+</div>
+
+<footer>
+<p>Built for Hospitals • Open Source Java Project • JDBC • Maven • MySQL/PostgreSQL</p>
+<p style="margin-top:10px">© 2025 Hospital Job Scheduling System - by kolatinithya-byte</p>
+<p style="margin-top:10px">This page is hosted on GitHub Pages. The Java app runs locally with a database.</p>
+</footer>
+</body>
+</html>
